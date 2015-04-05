@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+
+/*
+Comet.js
+*/
+
+"use strict";
+
+var fs = require('fs');
+
+path = process.cwd();
+
+fs.mkdir('client');
+fs.mkdir('server');
+fs.mkdir('public');
+fs.mkdir('private');
+fs.mkdir('lib');

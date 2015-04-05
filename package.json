@@ -1,0 +1,32 @@
+{
+  "name": "CometJs",
+  "version": "0.0.1",
+  "description": "Changing meteor projects",
+  "main": "comet.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/charlenopires/cometjs.git"
+  },
+  "author": "Charleno Pires <charleno@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/charlenopires/cometjs/issues"
+  },
+  "homepage": "https://github.com/charlenopires/cometjs",
+  "dependencies": {
+    "bluebird": "*",
+    "colors": "~1.0.3",
+    "commander": "^2.6.0",
+    "mkdirp": "^0.5.0",
+    "ncp": "~1.0.1",
+    "replace": "~0.3.0",
+    "rimraf": "~2.2.8"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.1"
+  },
+  "bin": { "comet" : "./bin/comet" }
+}
