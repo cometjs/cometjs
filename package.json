@@ -1,8 +1,7 @@
 {
   "name": "CometJs",
   "version": "0.0.1",
-  "description": "Changing meteor projects",
-  "main": "comet.js",
+  "description": "Comet.js is a generator for Meteor.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,23 +9,30 @@
     "type": "git",
     "url": "git://github.com/charlenopires/cometjs.git"
   },
+  "keywords": [
+    "scaffold",
+    "meteorjs",
+    "meteor",
+    "generator",
+    "structure"
+  ],
   "author": "Charleno Pires <charleno@gmail.com>",
+  "contributors": [
+    "Judson Silva <judsonbarroso@gmail.com>",
+    "Gabriel Rubens <grsabreu@gmail.com>"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/charlenopires/cometjs/issues"
   },
   "homepage": "https://github.com/charlenopires/cometjs",
   "dependencies": {
-    "bluebird": "*",
-    "colors": "~1.0.3",
-    "commander": "^2.6.0",
-    "mkdirp": "^0.5.0",
-    "ncp": "~1.0.1",
-    "replace": "~0.3.0",
-    "rimraf": "~2.2.8"
+    "bluebird": "*"
   },
   "devDependencies": {
     "mocha": "^2.2.1"
   },
-  "bin": { "comet" : "./bin/comet" }
+  "bin": {
+    "comet" : "./bin/comet"
+  }
 }
