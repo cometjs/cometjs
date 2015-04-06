@@ -4,17 +4,27 @@ Comet.js
 Comet.js, help you in its development with Meteor.js creating what we understand what should be a directory structure and files to Meteor.js that himself recognizes. Following the following organization:
 
 ```sh
+	├── main.js
+	├── mobile-config.js
+	├── LICENSE
+	├── README.md
+	├── .gitignore
 	├── client
 	│   ├── helpers
 	│   ├── i18n
 	│   ├── stylesheets
+	│   		├── util
+	│   				├── reset.import.less
+	│   		├── main.less
 	│   └── templates
-	│       ├── dashboard
 	│       ├── home
-	│       ├── layout
-	│       └── navigation
+	│       		├── home.html
+	│       		├── home.import.less
+	│       		├── home.js
+	│       ├── main.html
 	├── lib
 	│   └── collections
+	│   └── router.js
 	├── private
 	├── public
 	│   ├── fonts
