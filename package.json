@@ -27,12 +27,13 @@
   },
   "homepage": "https://github.com/charlenopires/cometjs",
   "dependencies": {
-    "bluebird": "*"
+    "bluebird": "*",
+    "colors": "^1.0.3"
   },
   "devDependencies": {
     "mocha": "^2.2.1"
   },
   "bin": {
-    "comet" : "./bin/comet"
+    "comet": "./bin/comet"
   }
 }
