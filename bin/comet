@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 
-var program = require('commander');
+var commands = require('commander');
+
 
 if (process.argv.length === 2) {
   process.argv.push('--help');
 }
 
-program
+commands
   .version(require('../package.json').version)
   .command('new [name]', 'Make a subdirectory called <name> and create a new Meteor app there.')
-
-program.parse(process.argv);
+  .parse(process.argv);

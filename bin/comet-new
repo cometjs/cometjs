@@ -1,12 +1,14 @@
 #! /usr/bin/env node
 
-var program = require('commander'),
+var commands = require('commander').parse(process.argv),
     colors = require('colors'),
     fs = require('fs'),
     promise = require('bluebird').Promise,
-    mkdirp = require('mkdirp');
+    mkdirp = require('mkdirp'),
+    rimraf = require('rimraf'),
+    replace = require('replace');
 
-var args = program.args;
+var args = commands.args;
 
 if (!args.length) {
   console.log('must give a name after' + "new".red + ' (ex: comet new myname)'.green);
@@ -16,4 +18,88 @@ if (!args.length) {
 if (args.length > 2) {
   console.log('sorry, we don\'t support multiple names'.green);
   process.exit(1);
+}
+
+var user = 'charlenopires';
+var name = args[0];
+
+console.log();
+console.log('Creating new meteor folder for: %s...'.green, name);
+
+var dest = process.cwd() + '/' + name;
+
+if (fs.existsSync(dest))
+  console.log('Error! This directory already exists'.green);
+else
+  start();
+
+function start() {
+  makeFolder()
+    .then(cloneRepo)
+    .then(deleteGitFolder)
+    .then(initGit)
+    .then(finish)
+    .catch(function(err) {
+      console.log("\n", 'Error'.bold.red);
+      console.log(err);
+    });
+}
+
+function makeFolder() {
+  return new Promise(function(resolve, reject) {
+    mkdirp(dest, function(err) {
+      if (err)
+        reject(err);
+      else
+        resolve();
+    });
+  });
+}
+
+function getRepo() {
+  return 'https://github.com/'+user+'/cometjs-starter';
+}
+
+function cloneRepo() {
+  return promiseProcess(
+    'git clone --depth=1 '+getRepo()+' '+ dest
+  );
+}
+
+function deleteGitFolder() {
+  return new Promise(function(resolve, reject) {
+    rimraf(dest + '/.git', function(err, data) {
+      if (err) return reject(err);
+      resolve(data);
+    })
+  });
+}
+
+function initGit() {
+  return promiseProcess('git init');
+}
+
+function promiseProcess(cmd) {
+  return new Promise(function(resolve, reject) {
+    console.log('Running '+cmd+'...'.green);
+    process.chdir(dest);
+
+    var exec = require('child_process').exec, child;
+    child = exec(cmd, handleChildProcess.bind(this, resolve, reject));
+  });
+}
+
+function handleChildProcess(resolve, reject, error, stdout, stderr) {
+  if (error)
+    return reject(error);
+
+  if (commands.debug)
+    console.log(stderr);
+
+  resolve();
+}
+
+function finish() {
+  console.log('Done!'.bold.red);
+  console.log();
 }
