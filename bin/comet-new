@@ -1,7 +1,7 @@
 #! /usr/bin/env node
 
 var program = require('commander'),
-    colors = require('color'),
+    colors = require('colors'),
     fs = require('fs'),
     promise = require('bluebird').Promise,
     mkdirp = require('mkdirp');
@@ -9,11 +9,11 @@ var program = require('commander'),
 var args = program.args;
 
 if (!args.length) {
-  console.log('must give a name after "new" (ex: comet new myname)'.red);
+  console.log('must give a name after' + "new".red + ' (ex: comet new myname)'.green);
   process.exit(1);
 }
 
 if (args.length > 2) {
-  console.log('sorry, we don\'t support multiple names'.red);
+  console.log('sorry, we don\'t support multiple names'.green);
   process.exit(1);
 }
