@@ -1,7 +1,7 @@
 {
   "name": "cometjs",
   "version": "0.0.1",
-  "description": "Comet.js is a projects starter for Meteor.js",
+  "description": "Comet.js is a Skeleton Starter for Meteor.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,7 +15,8 @@
     "meteor",
     "generator",
     "starter",
-    "bootstrap"
+    "bootstrap",
+    "skeleton"
   ],
   "author": "Charleno Pires <charleno@gmail.com>",
   "contributors": [
@@ -30,7 +31,8 @@
   "dependencies": {
     "bluebird": "*",
     "colors": "^1.0.3",
-    "commander": "^2.7.1"
+    "commander": "^2.7.1",
+    "mkdirp": "^0.5.0"
   },
   "devDependencies": {
     "mocha": "^2.2.1"
