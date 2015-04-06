@@ -28,7 +28,8 @@
   "homepage": "https://github.com/charlenopires/cometjs",
   "dependencies": {
     "bluebird": "*",
-    "colors": "^1.0.3"
+    "colors": "^1.0.3",
+    "commander": "^2.7.1"
   },
   "devDependencies": {
     "mocha": "^2.2.1"
