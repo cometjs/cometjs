@@ -13,8 +13,7 @@ Comet.js, help you in its development with Meteor.js creating what we understand
 	│   ├── helpers
 	│   ├── i18n
 	│   ├── stylesheets
-	│   		├── util
-	│   				├── reset.import.less
+	│   		├── utils
 	│   		├── main.less
 	│   └── templates
 	│       ├── home
@@ -89,7 +88,7 @@ Coming soon
 ### TODOS ###
 
 * Support scaffold
-* Create new themes with yours codebase
+* Create new themes with codebases in git repositories
 
 ## License
 Comet.js is available under the MIT license.
