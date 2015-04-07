@@ -1,9 +1,9 @@
 Comet.js
 =======
 
-Comet.js, help you in your development with Meteor.js creating what we understand
-what should be a directory structure and files to Meteor.js that himself recognizes.
-Following the organization:
+Comet.js, help you in your development with Meteor.js creating what we
+understand what should be a directory structure and files to Meteor.js
+that himself recognizes. Following the organization:
 
 ```sh
 	├── main.js
@@ -62,8 +62,8 @@ CLI Usage:
 ```
 Usage: comet [command]
 
-  new [name]  Make a subdirectory called <name> and create a new Meteor app, based
-							in our skeleton, there.
+  new [name]  Make a subdirectory called <name> and create a new Meteor app,
+	based in our skeleton, there.
 ```
 
 Generate a new skeleton meteor stack with:
