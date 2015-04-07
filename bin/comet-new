@@ -20,8 +20,21 @@ if (args.length > 2) {
   process.exit(1);
 }
 
-var user = 'charlenopires';
+// allow custom repos
+var repo = 'charlenopires';
 var repoName = 'starter';
+
+if (args.length === 2) {
+  var repoArg = args[1];
+  if (repoArg.indexOf('/') !== -1) {
+    repo = repoArg.split('/')[0];
+    repoName = repoArg.split('/')[1];
+  }
+  else {
+    repoName = repoArg;
+  }
+}
+
 var name = args[0];
 
 console.log();
@@ -58,7 +71,7 @@ function makeFolder() {
 }
 
 function getRepo() {
-  return 'https://github.com/'+user+'/cometjs-'+repoName;
+  return 'https://github.com/'+repo+'/cometjs-'+repoName;
 }
 
 function cloneRepo() {
