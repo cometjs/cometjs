@@ -49,7 +49,7 @@ Coming soon
 
 ## Installation
 ```sh
-  npm install -g comet
+  npm install -g cometjs
 ```
 
 ## Configuration
