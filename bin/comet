@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
-var commands = require('commander');
+var commands = require('commander'),
+    colors = require('colors');
 
 
 if (process.argv.length === 2) {
@@ -8,8 +9,8 @@ if (process.argv.length === 2) {
 }
 
 var args = process.argv.slice(2);
-if (args[0]){
-  console.log('must to use command ' + "new".red + ' (ex: comet new myname)'.green);
+if (args[0] !== 'new'){
+  console.log('must to use command ' + 'new'.red + ' (ex: comet new myname)'.green);
   process.exit(1);
 }
 
