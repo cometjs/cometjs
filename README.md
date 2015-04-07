@@ -59,7 +59,7 @@ No need configuration
 
 CLI Usage:
 ```
-Usage: cometjs [command]
+Usage: comet [command]
 
   new [name]  Make a subdirectory called <name> and create a new Meteor app, based in our skeleton, there.
 ```
