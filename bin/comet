@@ -16,5 +16,5 @@ if (args[0] !== 'new'){
 
 commands
   .version(require('../package.json').version)
-  .command('new [name]', 'Make a subdirectory called <name> and create a new Meteor app there.')
+  .command('new [name]', 'Make a subdirectory called <name> and create a new Meteor app, based in our skeleton, there.')
   .parse(process.argv);

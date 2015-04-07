@@ -11,7 +11,7 @@ var commands = require('commander').parse(process.argv),
 var args = commands.args;
 
 if (!args.length) {
-  console.log('must give a name after command ' + "new".red + ' (ex: comet new myname)'.green);
+  console.log('must give a name after command ' + 'new'.red + ' (ex: comet new myname)'.green);
   process.exit(1);
 }
 

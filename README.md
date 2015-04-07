@@ -53,12 +53,27 @@ Coming soon
 ```
 
 ## Configuration
-Comming soon
+No need configuration
 
 ## Usage
-Enter the app meteor directory and type:
+
+CLI Usage:
+```
+Usage: cometjs [command]
+
+  new [name]  Make a subdirectory called <name> and create a new Meteor app, based in our skeleton, there.
+```
+
+Generate a new skeleton meteor stack with:
+
 ```sh
-  comet
+  comet new [name]
+```
+
+and after
+```sh
+	cd [name]
+	meteor
 ```
 
 ## Generator
@@ -74,6 +89,7 @@ Coming soon
 ### TODOS ###
 
 * Support scaffold
+* Create new themes with yours codebase
 
 ## License
 Comet.js is available under the MIT license.
