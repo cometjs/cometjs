@@ -1,7 +1,7 @@
 Comet.js
 =======
 
-Comet.js, help you in its development with Meteor.js creating what we understand what should be a directory structure and files to Meteor.js that himself recognizes. Following the following organization:
+Comet.js, help you in your development with Meteor.js creating what we understand what should be a directory structure and files to Meteor.js that himself recognizes. Following the organization:
 
 ```sh
 	├── main.js
