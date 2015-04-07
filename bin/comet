@@ -7,6 +7,12 @@ if (process.argv.length === 2) {
   process.argv.push('--help');
 }
 
+var args = process.argv.slice(2);
+if (args[0]){
+  console.log('must to use command ' + "new".red + ' (ex: comet new myname)'.green);
+  process.exit(1);
+}
+
 commands
   .version(require('../package.json').version)
   .command('new [name]', 'Make a subdirectory called <name> and create a new Meteor app there.')

@@ -11,7 +11,7 @@ var commands = require('commander').parse(process.argv),
 var args = commands.args;
 
 if (!args.length) {
-  console.log('must give a name after' + "new".red + ' (ex: comet new myname)'.green);
+  console.log('must give a name after command ' + "new".red + ' (ex: comet new myname)'.green);
   process.exit(1);
 }
 
@@ -21,6 +21,7 @@ if (args.length > 2) {
 }
 
 var user = 'charlenopires';
+var repoName = 'starter';
 var name = args[0];
 
 console.log();
@@ -57,7 +58,7 @@ function makeFolder() {
 }
 
 function getRepo() {
-  return 'https://github.com/'+user+'/cometjs-starter';
+  return 'https://github.com/'+user+'/cometjs-'+repoName;
 }
 
 function cloneRepo() {
@@ -92,9 +93,6 @@ function promiseProcess(cmd) {
 function handleChildProcess(resolve, reject, error, stdout, stderr) {
   if (error)
     return reject(error);
-
-  if (commands.debug)
-    console.log(stderr);
 
   resolve();
 }
