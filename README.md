@@ -15,7 +15,8 @@ that himself recognizes. Following the organization:
 	│   ├── helpers
 	│   ├── i18n
 	│   ├── stylesheets
-	│   		├── utils
+	│   		├── util
+	│   				├── reset.import.less
 	│   		├── main.less
 	│   └── templates
 	│       ├── home
@@ -24,8 +25,8 @@ that himself recognizes. Following the organization:
 	│       		├── home.js
 	│       ├── main.html
 	├── lib
-	│   └── collections
 	│   └── router.js
+	├── collections
 	├── private
 	├── public
 	│   ├── fonts
