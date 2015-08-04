@@ -21,7 +21,7 @@ if (args.length > 2) {
 }
 
 // allow custom repos
-var repo = 'charlenopires';
+var repo = 'cometjs';
 var repoName = 'starter';
 
 if (args.length === 2) {
