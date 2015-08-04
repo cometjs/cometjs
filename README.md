@@ -6,34 +6,37 @@ understand what should be a directory structure and files to Meteor.js
 that himself recognizes. Following the organization:
 
 ```sh
-	├── main.js
-	├── mobile-config.js
-	├── LICENSE
-	├── README.md
-	├── .gitignore
-	├── client
-	│   ├── helpers
-	│   ├── i18n
-	│   ├── stylesheets
-	│   		├── util
-	│   				├── reset.import.less
-	│   		├── main.less
-	│   └── templates
-	│       ├── home
-	│       		├── home.html
-	│       		├── home.import.less
-	│       		├── home.js
-	│       ├── main.html
-	├── lib
-	│   └── router.js
-	├── collections
-	├── private
-	├── public
-	│   ├── fonts
-	│   ├── icons
-	│   └── images
-	├── server
-	└── tests
+  ├── mobile-config.js
+  ├── LICENSE
+  ├── README.md
+  ├── .gitignore
+  ├── client
+  │   ├── helpers
+  │   ├── i18n
+  │   ├── styles
+  │       ├── includes
+  │           ├── _breakpoints.styl
+  │           ├── _mixins.styl
+  │           ├── _palette.styl
+  │           ├── _settings.styl
+  │           ├── _typography.styl
+  │           ├── _variables.styl
+  │       ├── main.styl
+  │   └── views
+  │       ├── main.html
+  │       ├── main.js
+  ├── lib
+  │   └── routers 
+  │       └── router.js
+  ├── collections
+  ├── packages
+  ├── private
+  ├── public
+  │   ├── fonts
+  │   ├── icons
+  │   └── images
+  ├── server
+  └── tests
 ```
 
 ## TOC
